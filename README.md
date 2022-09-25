@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/YojimboSecurity/cookitcutter-bash">
     <!-- Please provide path to your logo here -->
-    <img src="docs/images/logo.svg" alt="Logo" width="100" height="100">
+    <img src="docs/images/yojimbo_synthwave_style.png" alt="Logo" width="300" height="300">
   </a>
 </h1>
 
@@ -52,37 +52,40 @@
 
 ## About
 
-> **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions -- just the ones relevant to your project.
-
-
+This projects allows me to quickly create a new bash project with a standard
+structure.
 
 ### Built With
 
-> **[?]**
-> Please provide the technologies that are used in the project.
+- [bash](https://www.gnu.org/software/bash/)
+- [cookiecutter](https://cookiecutter.readthedocs.io)
 
 ## Getting Started
 
+To get started with this project make sure you have the prerequisites installed.
+
 ### Prerequisites
 
-> **[?]**
-> What are the project requirements/dependencies?
+- [cookiecutter](https://cookiecutter.readthedocs.io)
 
 ### Installation
 
-> **[?]**
-> Describe how to install and get started with the project.
+You will need to install cookiecutter to use this project. For more information
+on how to install cookiecutter, please see the [cookiecutter documentation](https://cookiecutter.readthedocs.io).
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+To create a new project from a local clone of this repo, run:
+
+```bash
+cookiecutter cookiecutter-bash
+```
+
+To create a project from a remote repo, run:
+
+```bash
+cookiecutter gh:YojimboSecurity/cookiecutter-bash
+```
 
 ## Roadmap
 
@@ -93,9 +96,6 @@ See the [open issues](https://github.com/YojimboSecurity/cookitcutter-bash/issue
 - [Newest Bugs](https://github.com/YojimboSecurity/cookitcutter-bash/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
 ## Support
-
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
 
 Reach out to the maintainer at one of the following places:
 
@@ -115,7 +115,6 @@ Together, we can make cookitcutter-bash **better**!
 ## Contributing
 
 First off, thanks for taking the time to contribute! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
-
 
 Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
 
@@ -140,6 +139,4 @@ See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgements
 
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
+I would like to acknowledge [amazing-github-template](https://github.com/dec0dOS/amazing-github-template) for this readme.
