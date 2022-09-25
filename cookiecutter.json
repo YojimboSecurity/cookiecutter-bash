@@ -1,7 +1,5 @@
 {
-    "full_name": "David Johnson",
-    "github_username": "YojimboSecurity",
-    "project_slug": "mygolangproject",
+    "project_slug": "mybashproject",
     "project_short_description": "A Bash project.",
     "use_git": "y",
     "use_lib": "y",

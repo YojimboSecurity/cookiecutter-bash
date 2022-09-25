@@ -54,11 +54,11 @@ def init_git():
         git = Popen(command, cwd=PROJECT_DIRECTORY)
         git.wait()
 
-if "{{ cookiecutter.init_git }}".lower() == "y":
-    init_git()
-else:
-    remove_file(".gitignore")
 if "{{ cookiecutter.add_docs }}".lower() == "n":
     remove_dir("docs")
 if "{{ cookiecutter.use_lib }}".lower() == "n":
     remove_dir("lib")
+if "{{ cookiecutter.use_git }}".lower() == "y":
+    init_git()
+else:
+    remove_file(".gitignore")

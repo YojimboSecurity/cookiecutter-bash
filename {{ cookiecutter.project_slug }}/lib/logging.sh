@@ -8,7 +8,7 @@
 # I also use shellcheck to make sure that I am not using any bashisms.
 # https://github.com/koalaman/shellcheck
 
-. ./tools/lib/color.sh
+. ./lib/color.sh
 
 #######################################
 # Err handling and logging
