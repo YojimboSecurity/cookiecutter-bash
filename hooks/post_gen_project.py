@@ -29,6 +29,17 @@ def remove_file(filename: str):
     if os.path.exists(fullpath):
         os.remove(fullpath)
 
+def remove_dir(dirname: str):
+    """
+    generic remove directory from project dir
+    
+    Args:
+        dirname (str): name of the directory to remove
+    """
+    fullpath = os.path.join(PROJECT_DIRECTORY, dirname)
+    if os.path.exists(fullpath):
+        shutil.rmtree(fullpath)
+
 def init_git():
     """
     initializes git on the new project folder
@@ -43,7 +54,11 @@ def init_git():
         git = Popen(command, cwd=PROJECT_DIRECTORY)
         git.wait()
 
-if "{{ cookiecutter.init_git }}" == "y":
+if "{{ cookiecutter.init_git }}".lower() == "y":
     init_git()
 else:
     remove_file(".gitignore")
+if "{{ cookiecutter.add_docs }}".lower() == "n":
+    remove_dir("docs")
+if "{{ cookiecutter.use_lib }}".lower() == "n":
+    remove_dir("lib")

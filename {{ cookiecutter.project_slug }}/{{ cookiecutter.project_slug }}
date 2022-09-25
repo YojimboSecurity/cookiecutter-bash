@@ -1,8 +1,10 @@
 #!/bin/bash
 # This script is used to run the {{ cookiecutter.project_slug }}.
 
+{% if cookiecutter.use_lib == "y" %}
 # Import the logging functions
 source ./lib/logging.sh
+{% endif %}
 
 #######################################
 # _help - Display the help message
@@ -31,8 +33,10 @@ _help(){
 #   Writes log messages to STDOUT
 #######################################
 main(){
+    {% if cookiecutter.use_lib == "y" %}
     log::info "Starting {{ cookiecutter.project_slug }}"
     log::info "Done"
+    {% endif %}
     for arg in "$@"; do
         case $arg in
             -h|--help)

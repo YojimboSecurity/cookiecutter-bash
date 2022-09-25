@@ -3,5 +3,7 @@
     "github_username": "YojimboSecurity",
     "project_slug": "mygolangproject",
     "project_short_description": "A Bash project.",
-    "use_git": "y"
+    "use_git": "y",
+    "use_lib": "y",
+    "add_docs": "n"
 }
