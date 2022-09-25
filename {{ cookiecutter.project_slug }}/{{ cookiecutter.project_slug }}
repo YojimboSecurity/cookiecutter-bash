@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# This script is used to run the {{ cookiecutter.project_slug }}.
+# Uses shellcheck(https://github.com/koalaman/shellcheck) to lint the shell
+# scripts.
+#
+# Example:
+#    shellcheck -x {{ cookiecutter.project_slug }}
+#
+# Style guide:
+#    https://google.github.io/styleguide/shell.xml
+{% if cookiecutter.use_lib == "y" %}
+# Import the logging functions
+source ./lib/logging.sh
+{% endif %}
+
+#######################################
+# _help - Display the help message
+# Globals:
+#   None
+# Arguments:
+#   None
+# Returns:
+#   None
+# Outputs:
+#   Writes help message to stdout
+#######################################
+_help(){
+    echo "Usage: $0 [options]"
+}
+
+#######################################
+# Main function of the script
+# Globals:
+#   None
+# Arguments:
+#   $@: Arguments passed to the script
+# Returns:
+#   None
+# Outputs:
+#   Writes log messages to STDOUT
+#######################################
+main(){
+    {% if cookiecutter.use_lib == "y" %}
+    log::info "Starting {{ cookiecutter.project_slug }}"
+    {% endif %}
+    for arg in "$@"; do
+        case $arg in
+            -h|--help)
+                _help
+                exit 0
+                ;;
+            *)
+                log::error "Unknown argument: $arg"
+                _help
+                exit 1
+                ;;
+        esac
+    done
+}
+
+main "$@"
